@@ -10,6 +10,16 @@ namespace Lesson4
     {
         static void Main(string[] args)
         {
+            string GetFullName(string firstName, string lastName, string patronymic)
+            {
+                string FIO = firstName + " " + lastName + " " + patronymic;
+                return FIO;
+            }
+            Console.WriteLine(GetFullName("Имя1", "Фамилия1", "Отчество1"));
+            Console.WriteLine(GetFullName("Имя2", "Фамилия2", "Отчество2"));
+            Console.WriteLine(GetFullName("Имя3", "Фамилия3", "Отчество3"));
+            Console.WriteLine(GetFullName("Имя4", "Фамилия4", "Отчество4"));
+            Console.ReadKey();
         }
     }
 }
