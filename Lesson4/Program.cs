@@ -10,21 +10,21 @@ namespace Lesson4
     {
         static void Main(string[] args)
         {
+            string[] separators = { " " };
             int sum = 0;
             Console.WriteLine("Введите строку чисел");
             string stringNum = Convert.ToString(Console.ReadLine());
             int sumNum(string sN)
             {
 
-                string[] subs = stringNum.Split(' ');
-                foreach (var word in subs)
+                string[] subs = stringNum.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+                 foreach (var word in subs)
                 {
                     sum = sum + Convert.ToInt32(word);
                 }
                 return sum;
             }
             Console.WriteLine($"Суммма всех чисел в строке = {sumNum(stringNum)}");
-            int num;
             Console.ReadKey();
 
         }
